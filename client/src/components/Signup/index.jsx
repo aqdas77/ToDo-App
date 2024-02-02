@@ -34,7 +34,7 @@ export default function Signup() {
     event.preventDefault();
     // console.log(data)
     try{
-     const url = "http://localhost:8080/api/users"
+     const url = "https://todo-app-qmvs.onrender.com/api/users"
      const res = await axios.post(url,data);
      console.log("response from server :",res)
      navigate("/login")

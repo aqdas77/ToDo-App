@@ -30,7 +30,7 @@ export default function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try{
-      const url = "http://localhost:8080/api/auth"
+      const url = "https://todo-app-qmvs.onrender.com/api/auth"
       const res= await axios.post(url,data)
       localStorage.setItem("token",res.data.token);
       // console.log(res.data.token);

@@ -112,7 +112,7 @@ const Main = () => {
   };
   const fetchTasks = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/tasks", {
+      const res = await axios.get("https://todo-app-qmvs.onrender.com/api/tasks", {
         headers: {
           token: JWT,
           Accept: "application/json",
@@ -132,7 +132,7 @@ const Main = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/tasks/create-task",
+        "https://todo-app-qmvs.onrender.com/api/tasks/create-task",
         data,
         {
           headers: {
@@ -164,7 +164,7 @@ const Main = () => {
     try {
       setTaskId(task_data._id);
       const res = await axios.delete(
-        `http://localhost:8080/api/tasks/${taskId}`
+        `https://todo-app-qmvs.onrender.com/api/tasks/${taskId}`
       );
       if (res.status == 200) {
         await fetchTasks();
@@ -187,7 +187,7 @@ const Main = () => {
   };
   const handleUpdate = async (task_data) => {
     try {
-      const res = await axios.put(`http://localhost:8080/api/tasks/${taskId}`, {
+      const res = await axios.put(`https://todo-app-qmvs.onrender.com/api/tasks/${taskId}`, {
         taskTitle: task_data.taskTitle,
         taskDetail: task_data.taskDetail,
         taskDeadline: task_data.taskDeadline,
@@ -199,7 +199,7 @@ const Main = () => {
   };
   const handleComplete = async (task) => {
     try {
-      const res = await axios.put(`http://localhost:8080/api/tasks/${taskId}`, {
+      const res = await axios.put(`https://todo-app-qmvs.onrender.com/api/tasks/${taskId}`, {
         ...task,
         completed: true,
       });
