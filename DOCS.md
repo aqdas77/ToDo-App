@@ -23,8 +23,8 @@ To run this application locally or deploy it on your server, follow these steps:
 Clone the Repository:
 
 ```bash
-git clone https://github.com/aqdas77/task-app.git
-cd task-app
+git clone https://github.com/aqdas77/ToDo-App.git
+cd ToDo-App
 ```
 ## Install Dependencies:
 ```bash
@@ -77,8 +77,11 @@ Task App uses JSON Web Tokens (JWT) for user authentication and authorization. H
 
 ## Features
 User can create,update,delete tasks.
+
 Each Users have their own set of tasks and is stored in MongoDB.
+
 Implemented task filtering option by completion status(i.e. completed or pending).
+
 Incorporated visuals for task priorities (e.g., colour-coded based on due date).
 
 ## Contributing
