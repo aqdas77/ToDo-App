@@ -77,10 +77,6 @@ const Main = () => {
     setFilter(event.target.value);
     // console.log(filter)
   };
-  useEffect(() => {
-    filterProduct(filter);
-  }, [filter]);
-
   const filterProduct = (filter) => {
     if (filter == "completed") {
       const filteredtasks = permData.filter((ele) => {
@@ -96,6 +92,11 @@ const Main = () => {
       setTasks(permData);
     }
   };
+  useEffect(() => {
+    filterProduct(filter);
+  }, [filter]);
+
+ 
   const handleInput = (e) => {
     e.preventDefault();
     setData({ ...data, [e.target.name]: e.target.value });
